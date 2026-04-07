@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wella.AI</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="/static/app.js"></script>
+    <script src="/static/offline.js"></script>
+    <script src="/static/voice.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>🩺 Wella.AI Triage</h2>
+
+    <input id="name" placeholder="Patient Name">
+    
+    <select id="symptoms">
+       placeholder="Enter symptoms (e.g. fever, headache)">
+        <option value="" selected>Select a symptom (you can enter more in the chat below)</option>
+        <option>Fever</option>
+        <option>Headache</option>
+        <option>Cough</option>
+        <option>Diarrhea</option>
+        <option>Sore throat</option>
+        <option>Body pain</option>
+        <option>Bleeding</option>
+        <option>Vomiting</option>
+        <option>Abdominal pain</option>
+        <option>Dizziness</option>
+        <option>Weakness</option>
+        <option>Chest pain</option>
+        <option>Loss of appetite</option>
+    </select>
+
+    <h3>Vitals</h3>
+    <input id="temp" placeholder="Temperature">
+    <input id="heart_rate" placeholder="Heart Rate">
+    <input id="resp_rate" placeholder="Resp Rate">
+
+    <button onclick="submitData()">Assess Patient</button>
+
+    <!-- Chat UI -->
+    <div id="chatbox" class="chatbox"></div>
+
+    <div id="chat-input-container" style="display:none;">
+        <input id="chat-input" placeholder="Type answer..." />
+        <button id="chat-send">Send</button>
+    </div>
+
+    <h3>Result</h3>
+    <div id="result"></div>
+
+    <h3>Patients Diagnosis</h3>
+    <ul id="list"></ul>
+</div>
+
+</body>
+</html>

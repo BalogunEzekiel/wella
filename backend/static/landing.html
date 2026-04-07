@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wella.AI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .wrapper {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #cbd5f5;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+        .pulse {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #38bdf8;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            70% { transform: scale(1.4); opacity: 0; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="pulse"></div>
+
+        <h1>🩺 Welcome to Wella.AI</h1>
+
+        <p>
+            As a healthcare professional, I’ll assist you to triage, prioritize patient care,
+            and guide you with structured clinical treatment recommendations.
+        </p>
+
+        <button class="btn" onclick="startApp()">
+            Start Patient Diagnosis
+        </button>
+    </div>
+
+    <footer>
+        © 2026 Wella.AI — Intelligent Clinical Triage System
+    </footer>
+
+    <script>
+        function startApp() {
+            window.location.href = "/triage";
+        }
+    </script>
+
+</body>
+</html>
